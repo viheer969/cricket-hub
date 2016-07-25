@@ -1,0 +1,344 @@
+/*FIXME : display on 4K screens isnt clear*/
+
+
+/*TODO : sort media queris for each platform*/
+
+
+/* Extra small devices (phones, less than 768px) */
+
+@media (max-width: 766px) {}
+
+
+/* Landscape Mobile */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: 768px) and (max-width: 991px) {}
+
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) and (max-width: 1279px) {}
+
+
+/* Large devices (large desktops, 1280px and up) */
+
+@media screen and (min-width:1280px) and (max-width:1599px) {}
+
+
+/* Extra Large devices (large desktops, 1600px and up) */
+
+@media screen and (min-width:1600px) and (max-width:1920px) {
+    .personal-info {
+        padding-right: 180px;
+    }
+}
+
+
+/*
+        CUSTOM MEDIA QUERIES
+=================================*/
+
+@media only screen and (min-width: 37.5em) {
+    .hero h1 {
+        font-size: 50px;
+    }
+    .hero h1 span {
+        font-size: 76px;
+    }
+    .hero h2 {
+        width: 76%;
+        font-size: 18px;
+    }
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 96%;
+    max-width: 1120px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section__title {
+    font-size: 24px;
+    color: #3b3b58;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    margin: 14px 0;
+}
+
+.section__intro {
+    display: block;
+    text-align: center;
+    margin: 0 5% 30px;
+}
+
+@media only screen and (min-width: 43.75em) {
+    .section__intro {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+.section--cta {
+    color: #454545;
+    background: #f1f1f1;
+}
+
+.box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 100%;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+}
+
+.box__grid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+
+.box__title {
+    font-family: "Montserrat", sans-serif;
+}
+
+.box__more {
+    color: #ff4e5c;
+}
+
+.box__content {
+    color: #454545;
+    text-align: center;
+    padding: 20px;
+}
+
+.box__content > i {
+    color: #3b3b58;
+}
+
+.box__content:hover .box__more {
+    color: #ff3545;
+}
+
+.box__content:hover .box__more i {
+    padding-left: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+@media only screen and (min-width: 43.75em) {
+    .box {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 30%;
+        -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+    }
+}
+/*
+===========================================
+        CUSTOM STYLING
+===========================================
+*/
+
+
+/*
+            GENERAL
+------------------------------------ */
+
+html {
+    width: 100%;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 100;
+    /*    color: #333;*/
+    text-align: center;
+}
+
+
+/*
+            SECTION HERO
+------------------------------------ */
+
+a {
+    text-decoration: none;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.hero {
+    background-size: cover;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 80px;
+    height: 600px;
+    text-align: center;
+    /*TODO: add min-height and min-width to avoid data shifting*/
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #1ad6fd, #1d62fc);
+    font-size: 100;
+    color: #fff;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    margin-top: 100px;
+    cursor: pointer;
+    border-radius: 50%;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.6);
+        opacity: 1;
+    }
+    25% {
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.6);
+        opacity: 1;
+    }
+    50% {
+        box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.6);
+        opacity: 1;
+        transform: translateY(-15px);
+    }
+    75% {
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.6);
+        opacity: 1;
+    }
+    100% {
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.6);
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.button {
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.button:hover {
+    transform: rotate(180deg);
+}
+
+.username {
+    font-size: 60px;
+}
+
+.description {
+    margin-top: 20px;
+    font-weight: 300;
+    font-size: 25px;
+    text-shadow: 0 0 5px #fff;
+}
+
+.btn {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 12px 18px;
+    border-radius: 100px;
+    background: #ff4e5c;
+}
+
+.btn:hover {
+    background: #ff3545;
+}
+
+.footer {
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    background: #3b3b58;
+}
+
+.footer p {
+    opacity: .65;
+}
+.box__title {
+    font-family: "Montserrat", sans-serif;
+}
+
+.box__more {
+    color: #ff4e5c;
+}
+
+.box__content {
+    color: #454545;
+    text-align: center;
+    padding: 20px;
+}
+
+.box__content > i {
+    color: #3b3b58;
+}
+
+.box__content:hover .box__more {
+    color: #ff3545;
+}
+
+.box__content:hover .box__more i {
+    padding-left: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
